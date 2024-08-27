@@ -13,8 +13,7 @@ spec:
       labels:
         app: maze-frontend
     spec:
-      imagePullSecrets:
-        - name: regcred
+      
       containers:
         - name: maze-frontend-container
           image: 192.168.0.210:3010/thunderboltfront_jul_15:v1
