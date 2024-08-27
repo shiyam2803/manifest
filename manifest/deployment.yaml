@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: maze-frontend-deployment
   
+  
 spec:
   replicas: 1
   selector:
