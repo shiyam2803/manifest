@@ -19,3 +19,10 @@ spec:
         image: 192.168.0.210:8084/cicd_repo/spring-boot-app:41
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: spring-storage
+          mountPath: /data  # Replace with your desired path
+      volumes:
+      - name: spring-storage
+        persistentVolumeClaim:
+          claimName: pvc  # Replace with the name from pvc.yaml
