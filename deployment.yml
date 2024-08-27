@@ -25,4 +25,4 @@ spec:
       volumes:
       - name: spring-storage
         persistentVolumeClaim:
-          claimName: pvc  # Replace with the name from pvc.yaml
+          claimName: my-pvc  # Replace with the name from pvc.yaml
