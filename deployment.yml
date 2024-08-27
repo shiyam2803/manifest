@@ -21,8 +21,8 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: spring-storage
-          mountPath: /data  # Replace with your desired path
+          mountPath: /data  # Path inside the container where the volume will be mounted
       volumes:
       - name: spring-storage
         persistentVolumeClaim:
-          claimName: my-pvc  # Replace with the name from pvc.yaml
+          claimName: my-pvc  # Name of the PVC
