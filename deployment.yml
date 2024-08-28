@@ -21,7 +21,7 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: spring-storage
-          mountPath: /app  # Path inside the container where the volume will be mounted
+          mountPath: /opt/app  # Path inside the container where the volume will be mounted
       volumes:
       - name: spring-storage
         persistentVolumeClaim:
