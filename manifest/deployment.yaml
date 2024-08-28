@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: maze-frontend-deployment
-  
-  
 spec:
   replicas: 1
   selector:
@@ -14,10 +12,16 @@ spec:
       labels:
         app: maze-frontend
     spec:
-      
       containers:
         - name: maze-frontend-container
           image: 192.168.0.210:3010/thunderboltfront_jul_15:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3002
+          volumeMounts:
+            - mountPath: /test # Replace with the path in the container where you want to mount the volume
+              name: maze-volume
+      volumes:
+        - name: maze-volume
+          persistentVolumeClaim:
+            claimName: maze-pv
