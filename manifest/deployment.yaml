@@ -18,10 +18,4 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3002
-          volumeMounts:
-            - mountPath: /test # Replace with the path in the container where you want to mount the volume
-              name: maze-volume
-      volumes:
-        - name: maze-volume
-          persistentVolumeClaim:
-            claimName: maze-pv
+          
