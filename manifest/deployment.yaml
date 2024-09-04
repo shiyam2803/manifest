@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: maze-frontend-container
-          image: 192.168.0.210:3010/thunderboltfront_jul_15:v1
+          image: 10.10.30.22:8085/thunderboltfront:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3002
