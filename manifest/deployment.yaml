@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: maze-frontend-deployment
+  name: thunderbolt-frontend-deployment
 spec:
   replicas: 1
   selector:
