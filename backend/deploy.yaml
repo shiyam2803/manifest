@@ -1,1 +1,21 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thunderbolt-backend-deployment
+  namespace: thunderbolt-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thunderbolt-backend
+  template:
+    metadata:
+      labels:
+        app: thunderbolt-backend
+    spec:
+      containers:
+        - name: thunderbolt-backend-container
+          image: 10.10.30.22:8085/thunderboltbackend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5006
